@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddProductActivity">
+
+    <LinearLayout
+        android:id="@+id/utoptoolbar"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ubackimgf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/ic_arrow_back"
+            android:contentDescription="TODO" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/productupdateimageid"
+        android:layout_width="152dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="10dp"
+        android:background="#1F1AAF"
+        android:backgroundTint="#CFD3DC"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/utoptoolbar" />
+
+    <LinearLayout
+        android:id="@+id/productlinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/productupdateimageid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productupdateimageid">
+
+        <TextView
+            android:id="@+id/productupdatefromgallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="from Gallery" />
+
+        <TextView
+            android:id="@+id/productupdatefromcamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="from Camera" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/productupdatetitleid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="8"
+        android:hint="Name"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="#6CCC8F"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/productupdateimageid"
+        app:layout_constraintTop_toBottomOf="@+id/utoptoolbar" />
+
+    <EditText
+        android:id="@+id/productuodatedesid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="8"
+        android:hint="Description"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="#6CCC8F"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/productupdatetitleid"
+        app:layout_constraintStart_toStartOf="@+id/productupdatetitleid"
+        app:layout_constraintTop_toBottomOf="@+id/productupdatetitleid" />
+
+    <EditText
+        android:id="@+id/productupdatepriceid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="8"
+        android:hint="Price"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="#6CCC8F"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/productupdatetitleid"
+        app:layout_constraintStart_toStartOf="@+id/productupdatetitleid"
+        app:layout_constraintTop_toBottomOf="@+id/productuodatedesid" />
+
+    <EditText
+        android:id="@+id/productupdatequantityid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="8"
+        android:hint="Quantity"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="#6CCC8F"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/productupdatetitleid"
+        app:layout_constraintStart_toStartOf="@+id/productupdatetitleid"
+        app:layout_constraintTop_toBottomOf="@+id/productupdatepriceid" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintBottom_toTopOf="@+id/productupdatebtnid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productupdatequantityid"/>
+
+    <Button
+        android:id="@+id/productupdatebtnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/greencolor"
+        android:text="Update Product"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/productcalcelbtnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productupdatebtnid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
